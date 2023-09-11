@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: action-service
+#  data:
+#    mongodb:
+#      uri: mongodb://santosh:passw0rd@localhost:27017/flower
+#      connection-pool-size: 10
+#      driver-class-name: org.mongodb.driver.MongoDriver
+
+custom:
+  properties: devprofile    
+#spring:
+#  application:
+#    name: action-service
+#  profiles:
+#    active:
+#    - dev
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+#  config:
+#    import: configserver:http://localhost:8888/config
+#  data:
+#    mongodb:
+#      uri: mongodb://santosh:passw0rd@localhost:27017/flower
+#      connection-pool-size: 10
+#      driver-class-name: org.mongodb.driver.MongoDriver
