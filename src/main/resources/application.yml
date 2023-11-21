@@ -1,0 +1,33 @@
+server:
+  port: 8888
+spring:
+  config:
+    name: config-server
+
+#spring.cloud.config.server.git.uri=http://localhost:8888/
+
+  profiles:
+    active: native
+#spring.cloud.config.server.native.search-locations=file:///${user.home}/config
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+#         search-locations: classpath:/config
+
+#  security:
+#    oauth2:
+#      client:
+#        client_id: client1
+#        client_secret: '{noop}MyFlower'
+#        client_authentication_method: CLIENT_SECRET_BASIC
+#        authorization_grant_type: authorization_code
+#        redirect_uri: http://127.0.0.1:8080/login/oauth2/code/flower
+#        token_uri: http://auth-server.example.com/oauth2/token
+#        introspection_uri: http://auth-server.example.com/oauth2/introspect  # Optional
+      
+      #spring.cloud.config.server.git.uri=file:/config/
+#spring.cloud.config.server.git.clone-on-start=true
+#spring.security.user.name=root
+#spring.security.user.password=s3cr3t

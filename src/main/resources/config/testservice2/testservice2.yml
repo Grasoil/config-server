@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: testservice2
+    
+  cloud:
+    openfeign:
+      oauth2:
+        enabled: true
+        
+#logging:
+#  level:
+#    root: TRACE
+#    org:
+#      springframework:
+#        security: TRACE
+        
+#logging:
+#  file:
+#    name: logs/application.log
+#  pattern:
+#    console: "%d %-5level %logger : %msg%n"
+#    file: "%d %-5level [%thread] %logger : %msg%n"
+#  level:
+#    root: DEBUG
+#    org:
+#      springframework:
+#        web: DEBUG
+#      hibernate: DEBUG

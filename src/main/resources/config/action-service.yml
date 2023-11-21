@@ -1,14 +1,19 @@
+server:
+  port: 8081
 spring:
   application:
-    name: action-service
+    name: action-service    
   data:
     mongodb:
       uri: mongodb://santosh:passw0rd@localhost:27017/flower
       connection-pool-size: 10
       driver-class-name: org.mongodb.driver.MongoDriver
-#custom:
-#  properties: aaa
-      
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:8085
+
 #spring:
 #  application:
 #    name: action-service

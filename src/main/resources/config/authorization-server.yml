@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: authorization-server
+#  security:
+#    user:
+#      name: admin
+#      password: adminpassword
+#      roles: USERspring:
+  data:
+    mongodb:
+      uri: mongodb://santosh:passw0rd@localhost:27017/flower
+      connection-pool-size: 10
+      driver-class-name: org.mongodb.driver.MongoDriver
+
+     
+# OAuth 2.0 Client Configuration
+
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          flower:
+#            client-id: client1
+#            client-secret: myflower
+#            scope:
+#              - openid
+#              - read   # Additional scopes as needed
+#            authorization-grant-type: authorization_code
+#            redirect-uri: http://127.0.0.1:8087/callback-service/oauth2/callback   # Your application's callback URI
+#
+## OAuth 2.0 Provider Configuration
+#        provider:
+#          flower:
+#            authorization-uri: http://localhost:8085/oauth2/authorize
+#            token-uri: http://localhost:8085/oauth2/token
+#            jwk-set-uri: http://oauth-provider.com/.well-known/jwks.json
+#            user-info-uri: http://oauth-provider.com/userinfo
+#            user-name-attribute: sub
+      
+
+
+logging:
+  file:
+    name: src/main/resources/logs/application.log
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    root: DEBUG
+    org:
+      springframework:
+        web: DEBUG
+      hibernate: DEBUG
+ 
